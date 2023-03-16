@@ -15,8 +15,9 @@
 # limitations under the License.
 #
 
-FROM java:8
+#FROM java:8
+FROM openjdk:8-jre
 MAINTAINER breeze
-ADD rocketmq-exporter-0.0.2-SNAPSHOT.jar quickstart.jar
+ADD rocketmq-exporter-0.0.2-SNAPSHOT-exec.jar quickstart.jar
 EXPOSE 5557
 ENTRYPOINT ["java","-jar","quickstart.jar"]

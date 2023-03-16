@@ -65,13 +65,13 @@ Run
 ### Run Binary
 
 ```shell
-java -jar target/rocketmq-exporter-0.0.2-SNAPSHOT.jar
+java -jar target/rocketmq-exporter-0.0.2-SNAPSHOT-exec.jar
 ```
 
 ### Run Docker Image
 
 ```
-docker container run -itd --rm  -p 5557:5557  docker.io/rocketmq-exporter
+docker run -d --name rocketmq-exporter -p 5557:5557 docker.io/rocketmq-exporter --rocketmq.config.namesrvAddr=172.16.106.233:30876
 ```
 
 

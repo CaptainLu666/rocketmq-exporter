@@ -1,0 +1,80 @@
+target/rocketmq-exporter-0.0.2-SNAPSHOT.jar中没有主清单属性
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.2.RELEASE)
+
+[2023-03-15 15:34:22.158]  INFO Starting RocketMQExporterApplication v0.0.2-SNAPSHOT on saas-pub.sdongpo.com with PID 27034 (/opt/app/rocketmq-exporter/target/rocketmq-exporter-0.0.2-SNAPSHOT-exec.jar started by root in /opt/app/rocketmq-exporter)
+[2023-03-15 15:34:22.161]  INFO No active profile set, falling back to default profiles: default
+[2023-03-15 15:34:24.279]  INFO Tomcat initialized with port(s): 5557 (http)
+[2023-03-15 15:34:24.301]  INFO Initializing ProtocolHandler ["http-nio-5557"]
+[2023-03-15 15:34:24.319]  INFO Starting service [Tomcat]
+[2023-03-15 15:34:24.319]  INFO Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2023-03-15 15:34:24.335]  INFO The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[2023-03-15 15:34:24.453]  INFO Initializing Spring embedded WebApplicationContext
+[2023-03-15 15:34:24.454]  INFO Root WebApplicationContext: initialization completed in 2225 ms
+[2023-03-15 15:34:24.537]  INFO setNameSrvAddrByProperty nameSrvAddr=172.16.106.233:30876
+[2023-03-15 15:34:24.542]  INFO setWebTelemetryPath webTelemetryPath=/metrics
+[2023-03-15 15:34:24.547]  INFO setRocketmqVersion rocketmqVersion=494
+[2023-03-15 15:34:24.964]  INFO MetricsCollectTask init starting....
+[2023-03-15 15:34:25.340]  INFO closeChannel: close the connection to remote address[172.16.106.233:30876] result: true
+[2023-03-15 15:34:25.341]  INFO closeChannel: close the connection to remote address[172.16.106.233:30876] result: true
+[2023-03-15 15:34:25.341]  INFO closeChannel: close the connection to remote address[172.16.106.233:30876] result: true
+[2023-03-15 15:34:25.342]  INFO closeChannel: close the connection to remote address[172.16.106.233:30876] result: true
+[2023-03-15 15:34:25.352]  INFO closeChannel: close the connection to remote address[172.16.106.233:30876] result: true
+[2023-03-15 15:34:25.353]  INFO closeChannel: close the connection to remote address[172.16.106.233:30876] result: true
+[2023-03-15 15:34:25.355]  WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metricsCollectTask': Invocation of init method failed; nested exception is org.apache.rocketmq.remoting.exception.RemotingSendRequestException: send request to <172.16.106.233:30876> failed
+[2023-03-15 15:34:25.360]  INFO closeChannel: close the connection to remote address[172.16.106.233:30876] result: true
+[2023-03-15 15:34:25.379]  INFO Stopping service [Tomcat]
+[2023-03-15 15:34:25.395]  INFO 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-03-15 15:34:25.400] ERROR Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metricsCollectTask': Invocation of init method failed; nested exception is org.apache.rocketmq.remoting.exception.RemotingSendRequestException: send request to <172.16.106.233:30876> failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:139)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1737)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at org.apache.rocketmq.exporter.RocketMQExporterApplication.main(RocketMQExporterApplication.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+Caused by: org.apache.rocketmq.remoting.exception.RemotingSendRequestException: send request to <172.16.106.233:30876> failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingAbstract.invokeSyncImpl(NettyRemotingAbstract.java:441)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:390)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getBrokerClusterInfo(MQClientAPIImpl.java:1362)
+	at org.apache.rocketmq.tools.admin.DefaultMQAdminExtImpl.examineBrokerClusterInfo(DefaultMQAdminExtImpl.java:333)
+	at org.apache.rocketmq.tools.admin.DefaultMQAdminExt.examineBrokerClusterInfo(DefaultMQAdminExt.java:264)
+	at org.apache.rocketmq.exporter.service.client.MQAdminExtImpl.examineBrokerClusterInfo(MQAdminExtImpl.java:239)
+	at org.apache.rocketmq.exporter.task.MetricsCollectTask.init(MetricsCollectTask.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	... 26 common frames omitted
