@@ -252,7 +252,7 @@ Grafana Dashboard
 -------
 
 Grafana Dashboard ID: 10477, name: RocketMQ Exporter Overview.
-For details of the dashboard please see [RocketMQ Exporter Overview](https://grafana.com/dashboards/10477).
+For details of the dashboard please see [RocketMQ Exporter Overview](https://grafana.com/grafana/dashboards/14612).
 
 Quick Start
 -------------
